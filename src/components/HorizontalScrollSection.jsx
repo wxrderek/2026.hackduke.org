@@ -89,7 +89,7 @@ const HorizontalScrollSection = ({ panels, children }) => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [panels.length]);
+  }, [panels?.length]);
 
   return (
     <div

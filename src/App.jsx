@@ -1,5 +1,7 @@
 import HorizontalScrollSection from './components/HorizontalScrollSection';
 import VerticalSection from './components/VerticalSection';
+import IntroSection from './sections/IntroSection';
+import LongHorizontalSection from './sections/LongHorizontalSection';
 import './App.css';
 
 function App() {
@@ -42,52 +44,13 @@ function App() {
     }
   ];
 
-  // Panel data for second horizontal section (gallery/portfolio)
-  const panels2 = [
-    {
-      id: 6,
-      color: '#e74c3c',
-      title: 'Vision',
-      description: 'See the future through a lens of creativity and endless potential.',
-      emoji: '👁️'
-    },
-    {
-      id: 7,
-      color: '#34495e',
-      title: 'Design',
-      description: 'Craft beautiful interfaces that merge form and function seamlessly.',
-      emoji: '🎨'
-    },
-    {
-      id: 8,
-      color: '#16a085',
-      title: 'Develop',
-      description: 'Transform ideas into reality with robust and scalable solutions.',
-      emoji: '⚡'
-    },
-    {
-      id: 9,
-      color: '#f39c12',
-      title: 'Launch',
-      description: 'Deploy your creations and make an impact in the digital landscape.',
-      emoji: '🌟'
-    }
-  ];
+  // (Optional) Remove if not using panel arrays for horizontals
 
   return (
     <div className="app">
       {/* Section 1: Hero/Intro - Vertical */}
-      <VerticalSection backgroundColor="#0f0f1e">
-        <div className="subtitle">Welcome to the Future</div>
-        <h1>Scroll Beyond Limits</h1>
-        <p>
-          Experience a revolutionary scrolling journey that alternates between
-          vertical and horizontal navigation, creating an immersive storytelling experience.
-        </p>
-        <div className="scroll-indicator">
-          <span>Scroll to explore</span>
-          <div className="arrow-down">↓</div>
-        </div>
+      <VerticalSection backgroundColor="#0f0f1e" className="intro-vertical">
+        <IntroSection />
       </VerticalSection>
 
       {/* Section 2: First Horizontal - Sliding panels */}
@@ -124,8 +87,10 @@ function App() {
         </div>
       </VerticalSection>
 
-      {/* Section 4: Second Horizontal - Gallery/Portfolio */}
-      <HorizontalScrollSection panels={panels2} />
+      {/* Section 4: Long Horizontal - Custom children */}
+      <HorizontalScrollSection>
+        <LongHorizontalSection /> 
+      </HorizontalScrollSection>
 
       {/* Section 5: Footer/Contact - Vertical */}
       <VerticalSection backgroundColor="#0f0f1e">

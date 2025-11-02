@@ -1,5 +1,7 @@
 .vertical-section {
+  /* Fallback then mobile-safe dynamic viewport */
   min-height: 100vh;
+  min-height: 100svh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -7,6 +9,20 @@
   padding: 4rem 2rem;
   position: relative;
   transition: background-color 0.3s ease;
+}
+
+/* Override alignment for sections that need natural document flow */
+.vertical-section.intro-vertical {
+  align-items: stretch;
+  justify-content: flex-start;
+  /* Remove outer padding so child can be edge-to-edge */
+  padding: 0;
+}
+
+/* Make inner wrapper full-bleed for intro */
+.vertical-section.intro-vertical .vertical-content {
+  max-width: none;
+  width: 100%;
 }
 
 .vertical-content {

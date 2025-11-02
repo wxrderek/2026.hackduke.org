@@ -1,12 +1,14 @@
 import './VerticalSection.css';
 
-const VerticalSection = ({ children, backgroundColor, textColor = 'white', className = '' }) => {
+const VerticalSection = ({ children, backgroundColor, textColor = 'white', className = '', height, style }) => {
   return (
     <section
       className={`vertical-section ${className}`}
       style={{
         backgroundColor,
-        color: textColor
+        color: textColor,
+        ...(height ? { height } : {}),
+        ...(style || {})
       }}
     >
       <div className="vertical-content">
