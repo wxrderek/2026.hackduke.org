@@ -108,6 +108,26 @@ export default function IntroSection() {
           <span>© {new Date().getFullYear()} HackDuke</span>
         </div>
       </footer>
+
+
+      <section className="down1">
+        <img src="/images/ceiling.svg" alt="" className="down1-ceiling"/>
+        <img src="/images/big sign.svg" alt="" className="down1-big_sign"/>
+        <img src="/images/left sign.svg" alt="" className="down1-left_sign"/>
+        <img src="/images/right protrusion.svg" alt="" className="down1-right_protrusion"/>
+        {/* <img src="/images/vending1.svg" alt="" className="down1-vending"/> */}
+        {/* <img src="/images/Card Reader.svg" alt="" className="down1-vending-card_reader"/> */}
+        {/* <img src="/images/vending.svg" alt="" className="down1-vending">
+          <img src="/images/Card Reader.svg" alt="" className="down1-card_reader"/>
+        </img> */}
+        <div className="down1-vending">
+          <img src="/images/vending1.svg" alt="" className="down1-vending-image"/>
+          <img src="/images/Card Reader.svg" alt="" className="down1-vending-card_reader"/>
+        </div>
+        
+      </section>
     </div>
+
+    
   );
 }
