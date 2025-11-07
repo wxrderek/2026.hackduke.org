@@ -116,7 +116,7 @@ export default function IntroSection() {
         <img src="/images/left sign.svg" alt="" className="down1-left_sign"/>
         <img src="/images/right protrusion.svg" alt="" className="down1-right_protrusion"/>
         <div className="down1-vending">
-=          <img src="/images/vending1.svg" alt="" className="down1-vending-image"/>
+          <img src="/images/vending1.svg" alt="" className="down1-vending-image"/>
           <img src="/images/Card Reader.svg" alt="" className="down1-vending-card_reader"/>
         </div>
         
