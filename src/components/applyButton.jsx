@@ -2,7 +2,7 @@ import './applyButton.css';
 import applyBg from '../assets/applyBg.svg';
 import applyText from '../assets/applyText.svg'; 
         
-export default function applyButton() {
+export default function ApplyButton() {
   return (
         <div className="apply-container-app">
           <img src={applyBg} alt="Apply Background" className="apply-bg-app" />
