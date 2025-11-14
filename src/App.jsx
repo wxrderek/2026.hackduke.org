@@ -3,8 +3,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Navbar from './components/navbar'
-import ApplyButton from './components/applyButton'
 import HamburgerMenu from './components/hamburgerMenu'
+import MobileMenuOverlay from './components/MobileMenuOverlay'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -27,11 +27,10 @@ function App() {
             ticking = false
             return
           }
-            // Close mobile menu when user scrolls down
           if (Math.abs(delta) > threshold) {
             if (delta > 0) {
               setShowHeader(false)
-              setMobileOpen(false)
+              setMobileOpen(false) // close overlay on downward scroll
             } else {
               setShowHeader(true)
             }
@@ -46,23 +45,31 @@ function App() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  // lock background scroll while menu open
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? 'hidden' : ''
+  }, [mobileOpen])
+
   return (
     <>
-      <div className={`sticky-header ${showHeader ? 'show' : 'hide'}`}>
+      <div className={`sticky-header ${showHeader ? 'show' : 'hide'} ${mobileOpen ? 'overlay-open' : ''}`}>
         <div className="header-items">
           <Navbar className="desktop-only" />
           <HamburgerMenu
             open={mobileOpen}
             onToggle={() => setMobileOpen(o => !o)}
           />
-          {mobileOpen && (
-            <>
-              <Navbar className="mobile-inline" />
-              <ApplyButton className="mobile-inline" />
-            </>
-          )}
         </div>
       </div>
+
+      {mobileOpen && (
+        <MobileMenuOverlay
+          open={mobileOpen}
+          onClose={() => setMobileOpen(false)}
+          onToggle={() => setMobileOpen(o => !o)}
+        />
+      )}
+
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />

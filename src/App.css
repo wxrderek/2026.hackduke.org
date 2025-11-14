@@ -80,8 +80,8 @@
 .desktop-only { display: none; }
 .mobile-inline { display: none; }
 
-/* Desktop ≥768px */
-@media (min-width: 768px) {
+/* Desktop ≥700px */
+@media (min-width: 700px) {
   .desktop-only {
     display: flex;
     align-items: center;
@@ -89,12 +89,20 @@
   }
 }
 
-/* Mobile <768px */
-@media (max-width: 767px) {
-  .mobile-inline {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+/* Mobile <700px */
+@media (max-width: 699px) {
+  .desktop-only {
+    display: none;
+  }
+  .sticky-header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+  }
+  .header-items {
+    position: relative;
+    top: 0.75rem;
+    right: 0.75rem;
   }
 }
 
@@ -141,21 +149,4 @@
   position: static;
   top: auto;
   right: auto;
-}
-
-/* Responsive: switch to hamburger */
-@media (max-width: 700px) {
-  .desktop-only {
-    display: none;
-  }
-  .sticky-header {
-    position: fixed;
-    top: 0;
-    left: 50%;
-  }
-  .header-items {
-    position: relative;
-    top: 0.75rem;
-    right: 0.75rem;
-  }
 }
