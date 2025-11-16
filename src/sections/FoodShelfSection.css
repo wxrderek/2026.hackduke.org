@@ -1,0 +1,120 @@
+/* Continuous horizontal strip */
+.fs-strip {
+  position: relative;
+  flex: 0 0 auto; /* don't shrink in flex parent */
+  height: 100%;
+  min-width: 100vw;
+}
+
+.fs-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #2F3438 0%, #40464A 50%, #2F3438 100%);
+}
+
+.fs-row {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 100vw; /* continuous viewport-width columns */
+  height: 100%;
+  align-items: center;
+}
+
+.fs-cell {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  width: 100vw;
+}
+
+/* Scene container for all food items */
+.fs-scene {
+  position: relative;
+  width: 5760px;
+  height: 1080px;
+  margin: 0 auto;
+}
+
+/* Food items with explicit positioning and dimensions */
+.food-item {
+  position: absolute;
+  transition: transform 0.3s ease;
+}
+
+.food-item svg {
+  display: block;
+}
+
+
+
+/* Shelf - background element */
+.shelf-back {
+  left: 789px;
+  top: -187px;
+  width: 3337px;
+  height: 1573px;
+  z-index: 1;
+}
+
+/* Food items */
+.ramen {
+  left: 1143px;
+  top: 463px;
+  width: 578px;
+  height: 358px;
+  z-index: 5;
+}
+
+.pocky {
+  left: 1825px;
+  top: 520px;
+  width: 386px;
+  height: 284px;
+  z-index: 6;
+}
+
+.potato {
+  left: 3042px;
+  top: 363px;
+  width: 827px;
+  height: 454px;
+  z-index: 3;
+}
+
+.shrimp {
+  left: 3042px;
+  top: 363px;
+  width: 827px;
+  height: 454px;
+  z-index: 4;
+}
+
+/* Decorative items */
+.cat {
+  left: 2917px;
+  top: -27px;
+  width: 1057px;
+  height: 527px;
+  z-index: 7;
+}
+
+/* Hot food - keeping original position since no Figma data */
+.hot-food {
+  left: 2200px;
+  top: 400px;
+  width: 120px;
+  height: 100px;
+  z-index: 4;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .fs-scene {
+    width: 2880px;
+    height: 540px;
+    transform: scale(0.5);
+    transform-origin: center;
+  }
+}

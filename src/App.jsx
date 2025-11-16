@@ -2,6 +2,7 @@ import HorizontalScrollSection from './components/HorizontalScrollSection';
 import VerticalSection from './components/VerticalSection';
 import IntroSection from './sections/IntroSection';
 import LongHorizontalSection from './sections/LongHorizontalSection';
+import FoodShelfSection from './sections/FoodShelfSection';
 import './App.css';
 
 function App() {
@@ -89,10 +90,11 @@ function App() {
 
       {/* Section 4: Long Horizontal - Custom children */}
       <HorizontalScrollSection>
-        <LongHorizontalSection /> 
+        <LongHorizontalSection />
+        <FoodShelfSection />
       </HorizontalScrollSection>
 
-      {/* Section 5: Footer/Contact - Vertical */}
+      {/* Section 6: Footer/Contact - Vertical */}
       <VerticalSection backgroundColor="#0f0f1e">
         <h2>Ready to Begin?</h2>
         <p>
