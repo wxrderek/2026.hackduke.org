@@ -147,7 +147,11 @@ button {
 }
 
 /* Reset previous always-on flex */
-.desktop-only { display: none; }
+.desktop-only {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 .mobile-inline { display: none; }
 
 /* Desktop ≥700px */
@@ -157,7 +161,14 @@ button {
     align-items: center;
     gap: 1rem;
   }
-}
+  .sticky-header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+  }
+
+  }
+
 
 /* Mobile <700px */
 @media (max-width: 699px) {
@@ -172,7 +183,7 @@ button {
   .header-items {
     position: relative;
     top: 0.75rem;
-    right: 0.75rem;
+    left: 0.75rem;
   }
 }
 
