@@ -4,10 +4,11 @@
   background-size: cover;
   background-position: top center;
   width: 100%;
-  min-height: 217vw;
+  height: 165vw;
   display: block;
   position: relative;
   padding-bottom: 2rem;
+  overflow: hidden;
 }
 
 .down1-ceiling {
@@ -47,8 +48,7 @@
 }
 
 .down1-vending {
-  top: 14.7vw;
-  z-index: 4;
+  top: 13.6vw;
   position: relative;
   width: 54vw;
   height: auto;
@@ -62,14 +62,6 @@
   z-index: 3;
 }
 
-.down1-vending-card_reader {
-  position: absolute;
-  right: 3%;
-  top: 29%;
-  width: 10.9vw;
-  z-index: 9;
-}
-
 .intro-container {
   display: flex;
   flex-direction: column;
@@ -80,13 +72,22 @@
   position: absolute;
   top: 0;
   left: 0;
+  height: 100%;
 }
 
 .down1-left_shelf {
   position: absolute;
   top: 16.7vw;
   left: 0;
-  width: 21.5vw;
+  width: 27.2vw;
+  z-index: 4;
+}
+
+.down1-lower_left {
+  position: absolute;
+  bottom: -1.7vw;
+  width: 37.4vw;
+  left: -5.8vw;
   z-index: 4;
 }
 
@@ -102,13 +103,14 @@
   position: absolute;
   top: 0;
   right: 0;
+  height: 100%;
 }
 
 .down1-right_shelf {
   position: absolute;
   top: 17.2vw;
   right: 0;
-  width: 20.5vw;
+  width: 24.5vw;
   z-index: 4;
 }
 
@@ -122,9 +124,9 @@
 
 .down1-right_shelf_underneath {
   position: absolute;
-  top: 103.7vw;
+  bottom: -5.4vw;
   right: 0;
-  width: 22vw;
+  width: 25.13vw;
   z-index: 6;
 }
 
