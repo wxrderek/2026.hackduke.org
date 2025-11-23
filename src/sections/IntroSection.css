@@ -11,6 +11,14 @@
   overflow: hidden;
 }
 
+.down1-dateAbout {
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  top: 41.2vw;
+  width: 81.2vw;
+}
+
 .down1-ceiling {
   position: absolute;
   display: block;
