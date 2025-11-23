@@ -20,6 +20,7 @@ export default function IntroSection() {
           <img src="/images/right shelf underneath.svg" alt="" className="down1-right_shelf_underneath"/>
         </div>
         <div className="down1-vending">
+          <img src="/images/CodeForGood Sign.svg" alt="" className="down1-codeforgood_sign"/>
           <img src="/images/vending.svg" alt="" className="down1-vending-image"/>
         </div>
       </section>

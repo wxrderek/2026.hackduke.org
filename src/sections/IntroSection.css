@@ -70,6 +70,24 @@
   z-index: 3;
 }
 
+.down1-codeforgood_sign {
+  position: absolute;
+  transform-origin: top center;
+  animation: swing 3s ease-in-out infinite;
+  top: -4.5vw;
+  left: 7vw;
+  width: 39vw;
+}
+
+@keyframes swing {
+  0%, 100% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+}
+
 .intro-container {
   display: flex;
   flex-direction: column;
