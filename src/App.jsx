@@ -131,7 +131,7 @@ function App() {
 
 
         {/* Section 3: Arcade - Vertical */}
-        <VerticalSection backgroundColor="#0f0f1e">
+        <VerticalSection backgroundColor="#0f0f1e" className="arcade-vertical">
           <ArcadeSection />
         </VerticalSection>
       </div>
