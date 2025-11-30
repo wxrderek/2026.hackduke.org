@@ -1,8 +1,11 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
   text-align: center;
+  overflow-x: hidden;
+  align-self: flex-start;  /* Override body's flex centering to align to top */
+  width: 100%;
 }
 
 /* Sticky header that hides on scroll down and shows on scroll up */
@@ -149,4 +152,86 @@
   position: static;
   top: auto;
   right: auto;
+}
+
+/* App wrapper fade-in after intro animation */
+.app-wrapper {
+  opacity: 0;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.app-wrapper.fade-in {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+/* Landing page with full-screen SVG */
+.landing-page {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  max-width: 100vw;
+}
+
+.landing-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: auto;
+  max-width: 100vw;
+  display: block;
+}
+
+/* Apply button */
+.apply-button {
+  position: absolute;
+  top: 38.5vw;
+  left: 55vw;  /* Changed from right: 39% to vw units for consistent scaling with SVG */
+  z-index: 10;
+  background: transparent;
+  transform: translate(-50%, -50%);  /* Center both horizontally and vertically */
+  outline: none;
+  border: none;
+}
+
+.apply-button:focus {
+  outline: none;
+}
+
+.apply-button:focus-visible {
+  outline: none;
+}
+
+.apply-button img {
+  width: 9vw;  /* Scales with viewport width, matching the SVG scaling behavior */
+  height: auto;
+  display: block;
+}
+
+.apply-button:hover {
+  transform: translate(-50%, -50%) scale(1.05);  /* Maintain centering while scaling */
+  filter: brightness(1.1);
+  outline: none;
+  border: none;
+}
+
+.apply-button:active {
+  transform: translate(-50%, -50%) scale(0.98);  /* Maintain centering while scaling */
+  outline: none;
+  border: none;
+}
+
+
+/* Blank section below landing */
+.blank-section {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100vw;
+  background: #242424;
+  margin: 0;
+  padding: 0;
 }

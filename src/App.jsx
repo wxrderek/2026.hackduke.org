@@ -1,95 +1,24 @@
-import { useState, useEffect, useRef } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import Navbar from './components/navbar'
-import HamburgerMenu from './components/hamburgerMenu'
-import MobileMenuOverlay from './components/MobileMenuOverlay'
+import landingSvg from './assets/landing.svg'
+import applyPoster from './assets/apply_poster.svg'
 
 function App() {
-  const [count, setCount] = useState(0)
-  const [showHeader, setShowHeader] = useState(true)
-  const [mobileOpen, setMobileOpen] = useState(false)
-  const lastScrollY = useRef(0)
-
-  useEffect(() => {
-    lastScrollY.current = window.scrollY
-    let ticking = false
-    const threshold = 5
-    const onScroll = () => {
-      const current = window.scrollY
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          const delta = current - lastScrollY.current
-          if (current <= 0) {
-            setShowHeader(true)
-            lastScrollY.current = 0
-            ticking = false
-            return
-          }
-          if (Math.abs(delta) > threshold) {
-            if (delta > 0) {
-              setShowHeader(false)
-              setMobileOpen(false) // close overlay on downward scroll
-            } else {
-              setShowHeader(true)
-            }
-            lastScrollY.current = current
-          }
-          ticking = false
-        })
-        ticking = true
-      }
-    }
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
-
-  // lock background scroll while menu open
-  useEffect(() => {
-    document.body.style.overflow = mobileOpen ? 'hidden' : ''
-  }, [mobileOpen])
-
   return (
     <>
-      <div className={`sticky-header ${showHeader ? 'show' : 'hide'} ${mobileOpen ? 'overlay-open' : ''}`}>
-        <div className="header-items">
-          <Navbar className="desktop-only" />
-          <HamburgerMenu
-            open={mobileOpen}
-            onToggle={() => setMobileOpen(o => !o)}
-          />
-        </div>
-      </div>
+      {/* Landing page with SVG background */}
+      <div className="landing-page">
+        <img src={landingSvg} alt="HackDuke Landing" className="landing-svg" />
 
-      {mobileOpen && (
-        <MobileMenuOverlay
-          open={mobileOpen}
-          onClose={() => setMobileOpen(false)}
-          onToggle={() => setMobileOpen(o => !o)}
-        />
-      )}
-
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+        {/* Apply button */}
+        <button className="apply-button" onClick={() => console.log('Apply clicked')}>
+          <img src={applyPoster} alt="Apply to HackDuke" />
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
+      {/* Blank section below landing */}
+      <div className="blank-section">
+
+      </div>
     </>
   )
 }
