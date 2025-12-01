@@ -16,7 +16,8 @@ import bushesBehindTrain from '../assets/landing/bushes behind train.svg';
 import powerLine from '../assets/landing/power line.svg';
 import train from '../assets/landing/train.svg';
 import fence from '../assets/landing/fence.svg';
-import bigBush from '../assets/landing/big bush.svg';
+import bigBush from '../assets/landing/left bush.svg';
+import rightBush from '../assets/landing/right bush.svg';
 import boxes from '../assets/landing/boxes.svg';
 import convenienceStore from '../assets/landing/convenience store -building.svg';
 import interior from '../assets/landing/INTERIOR.svg';
@@ -121,7 +122,7 @@ export default function ClaudeLanding() {
       <img src={openSign} alt="" className="open-sign" />
 
       {/* Big bush right */}
-      <img src={bigBush} alt="" className="big-bush-right" />
+      <img src={rightBush} alt="" className="big-bush-right" />
 
       {/* Cat */}
       <img src={cat} alt="" className="cat" />

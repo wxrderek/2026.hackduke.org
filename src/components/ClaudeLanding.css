@@ -173,7 +173,7 @@
 .big-bush-left {
   position: absolute;
   left: 25.859vw; /* 496.5px */
-  top: 34.266vw; /* 657.91px */
+  top: 35.266vw; /* 657.91px */
   width: 15.548vw; /* 298.511px */
   height: 17.226vw; /* 330.746px */
   z-index: 21;
@@ -185,8 +185,8 @@
   left: 29.326vw; /* 563.06px */
   top: 45.190vw; /* 867.67px */
   width: 12.186vw; /* 233.968px */
-  height: 7.563vw; /* 145.221px */
-  z-index: 19;
+  height: 9.563vw; /* 145.221px */
+  z-index: 22;
 }
 
 /* Interior */
@@ -269,6 +269,11 @@
   padding: 0;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
+  outline: none; /* Remove outline on click/focus */
+}
+
+.apply-now-poster:focus {
+  outline: none; /* Remove outline on focus */
 }
 
 .apply-now-poster img {
@@ -310,8 +315,8 @@
 /* Big bush right */
 .big-bush-right {
   position: absolute;
-  left: 93.511vw; /* 1795.42px */
-  top: 35.841vw; /* 688.16px */
+  left: 88.511vw; /* 1795.42px */
+  top: 36.841vw; /* 688.16px */
   width: 16.388vw; /* 314.646px */
   height: 17.963vw; /* 344.901px */
   z-index: 30;
@@ -411,6 +416,8 @@
 
   .ground {
     top: 54.771vw; /* 898px */
+    left: -6.760vw; /* -53px */
+
   }
 
 
@@ -539,7 +546,22 @@
   }
 
   .buildings{
-    width: 99.174vw; /* 1827.37px */
+    width: 100.174vw; /* 1827.37px */
     height: 50.153vw; /* 540.546px */
+  }
+
+  .big-bush-left {
+    left: 2.859vw; /* 496.5px */
+    top: 44.266vw; /* 657.91px */
+  }
+
+  .big-bush-right {
+    display: none;
+  }
+  .boxes {
+    left: 5.326vw; /* 563.06px */
+    top: 55.190vw; /* 867.67px */
+    width: 12.186vw; /* 233.968px */
+    height: 9.563vw; /* 145.221px */
   }
 }
