@@ -39,11 +39,14 @@
 
 .navbar-buttons {
   position: absolute;
-  top: 3vw;
-  left: 0;
+  top: 2vw;
+  /* top: 50%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
   z-index: 2;
   display: flex;
   gap: 0px;
+  height: 6vw;
 }
 
 /*
@@ -55,12 +58,9 @@
   */
 
 .home-button {
-  margin-left: 1vw;
-  margin-right: 0.5vw;
-}
-
-.home-button img{
-  margin-top: 0.5vw;
+  margin-left: 1.5vw;
+  margin-right: 1vw;
+  width: 3.5vw;
 }
 
 .navbar-button {
@@ -84,6 +84,7 @@
 
 .apply-container {
   position: absolute;
+  z-index: 0;
   top: -1vw;
   z-index: 0;
   width: 12vw;
@@ -93,10 +94,8 @@
 .apply-button {
   position: absolute;
   cursor: pointer;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -16%);
-  width: 10vw;
+  background: none;
+  border: none;
 }
 
 .apply-button img {
