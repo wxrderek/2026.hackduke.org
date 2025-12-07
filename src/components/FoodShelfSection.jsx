@@ -1,5 +1,5 @@
-import './FirstHorizontalSection.css';
-import bgSvg from '../assets/bg.svg';
+import './FoodShelfSection.css';
+import bgSvg from '../assets/horizontal-bg.svg';
 import catSvg from '../assets/cat.svg';
 import chalkBoardSvg from '../assets/chalk_board.svg';
 import chipsSvg from '../assets/chips.svg';
