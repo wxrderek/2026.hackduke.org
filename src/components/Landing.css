@@ -1,4 +1,4 @@
-.claude-landing-container {
+.landing-container {
   position: relative;
   width: 100vw;
   height: 62.542vw; /* 1124px */
@@ -381,7 +381,7 @@
 
 /* Breakpoint for smaller desktop screens */
 @media (max-aspect-ratio: 16/10.1) {
-  .claude-landing-container{
+  .landing-container{
     height: 100vh;
   }
   .sponsor-marquee {
@@ -401,7 +401,7 @@
 
 /* Mobile breakpoint - scale up and center convenience store */
 @media (max-width: 768px) {
-  .claude-landing-container {
+  .landing-container {
     height: auto;
     min-height: 100vh;
     padding-bottom: 5vw;

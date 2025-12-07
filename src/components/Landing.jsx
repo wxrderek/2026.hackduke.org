@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './ClaudeLanding.css';
+import './Landing.css';
 
 // Import all SVG assets from landing folder
 import sunsetBg1 from '../assets/landing/sunset bg 1.svg';
@@ -38,7 +38,7 @@ import roblox from '../assets/landing/sponsorlogos/roblox.svg';
 import turbo from '../assets/landing/sponsorlogos/turbo.svg';
 import vipplay from '../assets/landing/sponsorlogos/vipplay.svg';
 
-export default function ClaudeLanding() {
+export default function Landing() {
   const [doorsOpen, setDoorsOpen] = useState(false);
 
   const toggleDoors = () => {
@@ -46,7 +46,7 @@ export default function ClaudeLanding() {
   };
 
   return (
-    <div className="claude-landing-container">
+    <div className="landing-container">
       {/* Sky gradients */}
       <div className="sunset-bg-2"></div>
       <div className="sunset-bg-1"></div>
@@ -114,9 +114,9 @@ export default function ClaudeLanding() {
       </div>
 
       {/* Apply Now Poster Button */}
-      <button className="apply-now-poster" aria-label="Apply Now">
+      <a href="https://portal.hackduke.org/" className="apply-now-poster" aria-label="Apply Now" target="_blank" rel="noopener noreferrer">
         <img src={applyNowPoster} alt="Apply Now" />
-      </button>
+      </a>
 
       {/* Open sign */}
       <img src={openSign} alt="" className="open-sign" />

@@ -1,10 +1,10 @@
 import './App.css'
-import ClaudeLanding from './components/ClaudeLanding'
+import Landing from './components/Landing'
 
 function App() {
   return (
     <>
-      <ClaudeLanding />
+      <Landing />
     </>
   )
 }
