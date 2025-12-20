@@ -147,6 +147,8 @@
   width: 3.86%; /* 296.39/7680 */
   height: 42.62%; /* 460.28/1080 */
   z-index: 8;
+  transform-origin: top center; /* Pivot from top for hanging effect */
+  will-change: transform;
 }
 
 .feb-1 {
@@ -155,6 +157,8 @@
   width: 3.86%; /* 296.39/7680 */
   height: 42.62%; /* 460.28/1080 */
   z-index: 8;
+  transform-origin: top center; /* Pivot from top for hanging effect */
+  will-change: transform;
 }
 
 /* Overlays */
@@ -165,5 +169,30 @@
   height: 100%;
   z-index: 10;
   pointer-events: none; /* Allow clicks to pass through */
+}
+
+/* Signs */
+.sign-1 {
+  left: 33.1%;
+  top: 4%;
+  height: 45%;
+  aspect-ratio: 860 / 408;
+  z-index: 9;
+}
+
+.sign-2 {
+  left: 50%;
+  top: 50%;
+  height: 45%;
+  aspect-ratio: 860 / 408;
+  z-index: 9;
+}
+
+.schedule-sign {
+  left: 10.82%;
+  top: 10%;
+  height: 13%;
+  aspect-ratio: 835 / 142;
+  z-index: 9;
 }
 
