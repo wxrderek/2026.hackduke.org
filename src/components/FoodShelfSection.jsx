@@ -1,7 +1,7 @@
 import './FoodShelfSection.css';
 import bgSvg from '../assets/horizontal-bg.svg';
 import catSvg from '../assets/cat.svg';
-import chalkBoardSvg from '../assets/chalk_board.svg';
+import chalkBoardSvg from '../assets/chalk_board2.svg';
 import chipsSvg from '../assets/chips.svg';
 import feb1Svg from '../assets/feb_1.svg';
 import hotFoodSvg from '../assets/hot_food.svg';
