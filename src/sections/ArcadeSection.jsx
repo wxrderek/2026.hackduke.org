@@ -33,10 +33,11 @@ export default function ArcadeSection() {
           <img src="/src/assets/window frame.svg" alt="" className="claw-window-frame" />
           <img src="/src/assets/controls.svg" alt="Controls" className="claw-controls" />
           <img src="/src/assets/round controller thing.svg" alt="Round controller" className="claw-round-controller" />
+          <img alt="FAQ" className="claw-faq-overlay" src="/src/assets/FAQ.svg" />
           <img src="/src/assets/FAQ.svg" alt="FAQ" className="claw-faq-sign" />
 
           {/* FAQ Accordion */}
-          <div className="claw-faq-questions">
+          <div id="faqs" className="claw-faq-questions">
             <Accordion items={FAQ_QUESTIONS} />
           </div>
         </div>
@@ -50,7 +51,7 @@ export default function ArcadeSection() {
         <img src="/src/assets/stool-2.svg" alt="Stool" className="arcade-stool-right" />
 
         {/* Sponsor section */}
-        <img src="/src/assets/sponsor placeholder.svg" alt="2025 Sponsors" className="arcade-sponsor-placeholder" />
+        <img id="sponsors" src="/src/assets/sponsor placeholder.svg" alt="2025 Sponsors" className="arcade-sponsor-placeholder" />
         <div className="arcade-sponsor-marquee">
           <SponsorsMarquee />
         </div>

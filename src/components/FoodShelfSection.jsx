@@ -80,7 +80,7 @@ export default function FoodShelfSection() {
               <img src={overlaysSvg} alt="Overlays" />
             </div>
 
-            <div className="food-item sign-1">
+            <div id="schedule" className="food-item sign-1">
               <img src={sign1Svg} alt="Sign 1" />
             </div>
 

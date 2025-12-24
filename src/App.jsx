@@ -122,14 +122,16 @@ function App() {
 
       <div className="app">
         {/* Section 1: Hero/Intro - Vertical */}
-        <VerticalSection backgroundColor="#0f0f1e" className="intro-vertical">
-          <IntroSection />
+        <VerticalSection backgroundColor="#0f0f1e" className="intro-vertical" id="home">
+          <IntroSection id="about"/>
         </VerticalSection>
 
         {/* Section 2: First Horizontal - Sliding panels */}
-        <HorizontalScrollSection>
-          <FoodShelfSection/>
-        </HorizontalScrollSection>
+        <div id="schedule">
+          <HorizontalScrollSection>
+            <FoodShelfSection/>
+          </HorizontalScrollSection>
+        </div>
 
 
         {/* Section 3: Arcade - Vertical */}
