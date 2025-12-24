@@ -8,7 +8,6 @@ export default function ArcadeSection() {
     <div className="arcade-container">
       <div className="arcade-scene">
         {/* Background pattern */}
-        <img src="/src/assets/bg-2.svg" alt="" className="arcade-bg-pattern" />
 
         {/* Floor base */}
         <img src="/src/assets/floor.svg" alt="" className="arcade-floor" />

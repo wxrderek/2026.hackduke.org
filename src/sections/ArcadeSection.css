@@ -5,7 +5,7 @@
   width: 100%;
   margin: 0;
   position: relative;
-  background: #1a1a1a;
+  background: #33547a;
   padding-bottom: calc((4320 / 1920) * 100%); /* Aspect ratio padding trick */
 }
 
