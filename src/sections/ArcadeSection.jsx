@@ -38,7 +38,7 @@ export default function ArcadeSection() {
         <img src="/src/assets/stool-2.svg" alt="Stool" className="arcade-stool-right" />
 
         {/* Sponsor section */}
-        <img src="/src/assets/sponsor placeholder.svg" alt="2025 Sponsors" className="arcade-sponsor-placeholder" />
+        <img id="sponsors" src="/src/assets/sponsor placeholder.svg" alt="2025 Sponsors" className="arcade-sponsor-placeholder" />
         <div className="arcade-sponsor-marquee">
           <SponsorsMarquee />
         </div>
