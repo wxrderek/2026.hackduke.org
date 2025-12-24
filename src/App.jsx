@@ -127,9 +127,11 @@ function App() {
         </VerticalSection>
 
         {/* Section 2: First Horizontal - Sliding panels */}
+        <div id="schedule">
         <HorizontalScrollSection>
           <FoodShelfSection/>
         </HorizontalScrollSection>
+        </div>
 
 
         {/* Section 3: Arcade - Vertical */}
